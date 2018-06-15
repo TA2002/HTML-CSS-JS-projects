@@ -1,0 +1,2 @@
+This is a simple treasure map game. You have to find the location of the treasure. In the left bottom corner you could find your current 
+location and distance lefted for the treasure
