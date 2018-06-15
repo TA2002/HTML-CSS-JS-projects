@@ -1,0 +1,109 @@
+/* Basic reset */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	
+	/* Better text styling */
+}
+
+/* Finally adding some IE9 fallbacks for gradients to finish things up */
+
+/* A nice BG gradient */
+html {
+	height: 100%;
+	background: blue;
+    background-size: cover;
+}
+a{
+    font-family: 'Merriweather Sans', sans-serif;
+    font-size: 20px;
+}
+.text{
+    font-size: 30px;
+    font-style: italic;
+}
+table{
+    width:900px;
+    border-collapse: collapse;
+    text-align: right;
+}
+.inc{
+    color: #67696b;
+    background-color: #e1e5ed;
+}
+.simp{
+    background-color: white;
+}
+.wnd{
+    color:red;
+    background-color: white;
+}
+td{
+    font-size:18px;
+    border:1px solid;
+    vertical-align: top;
+    padding-top: 5px;
+    padding-right: 5px;
+    width: 14.28%;
+}
+.simp{
+    font: bold 14px Arial, sans-serif;
+   height: 100px; 
+}
+.wnd{
+    font: bold 14px Arial, sans-serif;
+    height: 100px;
+}
+.inc{
+    font: bold 14px Arial, sans-serif;
+    height: 100px;
+}
+.days{
+    border:none;
+    height:10px
+}
+/* Slideshow */
+* {box-sizing:border-box}
+
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+.mySlides {
+    display: none;
+}
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: 10%;
+  margin-top: -22px;
+  padding: 25px;
+  color: black;
+  font-weight: bold;
+  font-size: 50px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+.prev{
+    left: -10px;
+    border-radius: 3px 0 0 3px;
+}
+/* Position the "next button" to the right */
+.next {
+    right: -10px;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+#january{
+    display: block;
+}
+.name{
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 50px
+}
+/* Using box shadows to create 3D effects */
