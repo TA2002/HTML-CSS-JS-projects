@@ -1,0 +1,73 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>JS</title>
+		<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+		<style>
+		body{
+			
+			margin:0;
+			padding:0;
+		}
+		#tool{
+			float:right;
+			cursor:pointer;
+			margin:50px;
+		}
+		#karta{
+			float:left;
+			cursor:none;
+		}
+		#kursor{
+			width:40px;
+			height:40px;
+			cursor:none;
+		}
+		</style>
+	<head>
+	<body>
+		
+		<div id='karta'>
+			<img src='karta.jpg' width='1500' height='700'>
+		</div>
+		<p id='dal'></p>
+		<p id='pos'></p>
+		<div id='tool'>
+			<h1>Новая игра</h1>
+			<h2>Показать место клада</h2>
+		</div>
+		<img id='kursor' src='g.png'>
+		<script src='https://code.jquery.com/jquery-3.2.1.js'></script>
+		<script>
+			var ry,rx,rast;
+			function newR(){
+				ry=Math.floor(Math.random()*700);
+				rx=Math.floor(Math.random()*1500);
+				alert('Место клада обнавилось!');
+			}
+			newR();
+			$('h1').click(newR);
+			$('h2').click(function(){
+				alert('X = '+rx+'\nY = '+ry);
+			});
+			$('#karta').mousemove(function(e){
+				var x = e.pageX;
+				var y = e.pageY;
+				a=x-rx;
+				b=y-ry;
+				$('#karta').css('cursor','none');
+				rast=Math.floor(Math.sqrt(a*a+b*b));
+				$('#pos').text('X = '+e.pageX+'\nY = '+e.pageY);
+				$('#dal').text('Вы далеко от клада на '+rast);
+				$('#kursor').offset({
+					left: e.pageX,
+					top:e.pageY
+				})
+				if(rast<5){
+					alert("Вы победили!");
+					newR();
+				}
+			});
+		</script>
+	</body>
+<html>
