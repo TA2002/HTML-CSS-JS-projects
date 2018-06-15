@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Sedgwick+Ave+Display" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans" rel="stylesheet">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Tarlan Askaruly</title>
+        <meta name="about" content="ABOUT">
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body align = "center">
+        <h1>Tarlan Askaruly</h1>
+        <img src = "for site.jpg" class = "first">
+        <p id = "out"></p>
+        <img src = "back.png" onclick="topFunction()" id = "back" title = "Go to top">
+		<script src ="https://code.jquery.com/jquery-3.2.1.js"></script>
+        <script>
+            window.onscroll = function() {scrollFunction()};
+
+            function scrollFunction() {
+                if(document.body.scrollTop > 300 || document.documentElement.scrollTop > 20){
+                    document.getElementById("back").style.display = "block";
+                } 
+                else{
+                    document.getElementById("back").style.display = "none";
+                }
+            }
+
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+                document.body.scrollTop = 0; // For Chrome, Safari and Opera 
+                document.documentElement.scrollTop = 0; // For IE and Firefox
+            }
+            var name = prompt("Hello, what is your name?");
+            $('#out').text("Hello, "  + name + '!');
+            function mainFunction(){
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+            function aboutFunction(){
+                document.body.scrollTop = 540;
+                document.documentElement.scrollTop = 540;
+            }
+            function interestsFunction(){
+                document.body.scrollTop = 850;
+                document.documentElement.scrollTop = 850;
+            }
+            function hobbiesFunction(){
+                document.body.scrollTop = 2100;
+                document.documentElement.scrollTop = 2100;
+            }
+            var slideIndex = 1;
+            showSlides(slideIndex);
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                if (n > slides.length) {slideIndex = 1} 
+                if (n < 1) {slideIndex = slides.length}
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none"; 
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block"; 
+                dots[slideIndex-1].className += " active";
+            }
+		</script>
+        <div class = "line" align = "center"><a class = "tx">About me</a></div>
+        <div>
+            <p class = "about">My name is <b>Tarlan Askaruly</b>. I am 15 years old. Currently I am a student of NIS in Astana. On this site i am going to share my interests, projects and achievements.</p>
+        </div>
+        <div class = "line" align = "center"><a class = "tx">I'm interested in</a></div>
+        <br>
+        <center>
+            <div class = "container">
+                <div class="overlay">
+                    <div class="text">Web Development</div>
+                </div>    
+            </div>
+        </center>
+        <br>
+        <center>
+            <div class = "container2">
+                <div class="overlay2">
+                    <div class="text">Web Design</div>
+                </div>
+            </div>
+        </center>
+        <br>
+        <center>
+            <div class = "container3">
+                <div class="overlay">
+                    <div class="text">Robotics</div>
+                </div>
+            </div>
+        </center>
+        <br>
+        <center>
+            <div class = "container4">
+                <div class="overlay2">
+                    <div class="text">Programming</div>
+                </div>
+            </div>
+        </center>
+        <br>
+        <div class = "line" align = "center"><a class = "tx">Hobbies</a></div>
+        <br>
+        <p class = "ht">I'm never against playing football or basketball with friends, because doing sports is amusing and at the same time an useful hobby. In my spare time I prefer to listen to music, It helps me to remove all the load. Moreover, I like playing differrent computer games with friends, because i always win them)))</p>
+        <div class="slideshow-container">
+            <div class="mySlides fade" id = "s1">
+                <div class="numbertext">1 / 3</div>
+                <img src="football.jpg" style="width:100%">
+                <div class="text2">SPORT</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="music.jpg" style="width:100%">
+                <div class="text2">MUSIC</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="games.jpeg" style="width:100%">
+                <div class="text2">COMPUTER GAMES</div>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        
+
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span> 
+            <span class="dot" onclick="currentSlide(2)"></span> 
+            <span class="dot" onclick="currentSlide(3)"></span> 
+        </div>
+        <br>
+        <div class = "line" align = "center"><a class = "tx">Contacts</a></div>
+        <br>
+        <a href = "mailto:as.tarlan02@gmail.com" id="cl">Email: as.tarlan02@gmail.com</a>
+        <p>+7 (701) 952-43-49</p>
+        <hr class = "lne"></div>
+        <p class = "end">Tarlan Askaruly, 2017 </p>
+        <br>
+    </body>
+</html>
+<!--
+
+    [[[[[[[[[[[[[[[      ]]]]]]]]]]]]]]]
+    [::::::::::::::      ::::::::::::::]
+    [::::::::::::::      ::::::::::::::]
+    [::::::[[[[[[[:      :]]]]]]]::::::]
+    [:::::[                      ]:::::]
+    [:::::[                      ]:::::]
+    [:::::[                      ]:::::]
+    [:::::[                      ]:::::]
+    [:::::[    Tarlan Askaruly   ]:::::]
+    [:::::[       Brackets       ]:::::]
+    [:::::[                      ]:::::]
+    [:::::[                      ]:::::]
+    [:::::[                      ]:::::]
+    [:::::[                      ]:::::]
+    [::::::[[[[[[[:      :]]]]]]]::::::]
+    [::::::::::::::      ::::::::::::::]
+    [::::::::::::::      ::::::::::::::]
+    [[[[[[[[[[[[[[[      ]]]]]]]]]]]]]]]
+
+-->
