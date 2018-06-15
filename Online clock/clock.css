@@ -1,0 +1,14 @@
+body{
+    background: #302e34;
+}
+#clock{
+    position: absolute;
+    top: 35%;
+    left: 15%;
+    font-family: 'Share Mono', monospace;
+    font-size: 200px;
+    color: #def1ff;
+    text-shadow: 0 0 50px #2a14ff; 
+    border: double #def1ff;
+    box-shadow: 0 0 50px #3a14ff
+}
