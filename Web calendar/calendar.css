@@ -1,4 +1,4 @@
-/* Basic reset */
+
 * {
 	margin: 0;
 	padding: 0;
@@ -7,9 +7,7 @@
 	/* Better text styling */
 }
 
-/* Finally adding some IE9 fallbacks for gradients to finish things up */
 
-/* A nice BG gradient */
 html {
 	height: 100%;
 	background: blue;
@@ -63,7 +61,7 @@ td{
     border:none;
     height:10px
 }
-/* Slideshow */
+
 * {box-sizing:border-box}
 
 .slideshow-container {
@@ -74,7 +72,7 @@ td{
 .mySlides {
     display: none;
 }
-/* Next & previous buttons */
+
 .prev, .next {
   cursor: pointer;
   position: absolute;
@@ -92,13 +90,12 @@ td{
     left: -10px;
     border-radius: 3px 0 0 3px;
 }
-/* Position the "next button" to the right */
+
 .next {
     right: -10px;
     border-radius: 3px 0 0 3px;
 }
 
-/* On hover, add a black background color with a little bit see-through */
 #january{
     display: block;
 }
